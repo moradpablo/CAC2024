@@ -86,7 +86,51 @@ a {
   color: #fff;
   padding-left: 5px;
 }
+.cac-navbar-container {
+  background-color: #353434;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
 
+.img-brand {
+  max-width: 200px;
+  max-height: 120px;
+}
+.navbar-menu ul {
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-menu li {
+  display: inline-block;
+  padding-left: 10px;
+}
+
+.search-container {
+  display: flex;
+}
+
+.search-input {
+  background-color: #0d0d0d;
+  border-color: #0d0d0d;
+  border: none;
+  outline: none;
+  height: 25px;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.search-button {
+  background-color: #0d0d0d;
+  border-color: #0d0d0d;
+  border: none;
+  cursor: pointer;
+  border-radius: 0px 10px 10px 0px;
+}
+
+.search-button i {
+  color: #fff; /* Color del icono */
+}
 @keyframes ticker {
   0% {
     transform: translateX(100%);
