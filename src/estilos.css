@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+html,
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  background-color: #0d0d0d;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.cac-topbar {
+  color: #fff;
+  background-color: #ff0000;
+}
+
+.cac-topbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.left-content {
+  max-width: 60%;
+}
+.right-content {
+  width: 20vw;
+  align-items: center;
+}
+
+.breaking-news span {
+  width: 15vw;
+  color: #fff;
+  padding: 15px 20px;
+  border-right: 1px solid #f0f3f5;
+  font-weight: 500;
+}
+
+.breaking-news {
+  display: flex;
+  align-items: center;
+  width: 60vw;
+}
+.ticker {
+  width: 100%;
+  overflow: hidden;
+}
+
+.ticker ul {
+  padding: 0;
+  margin: 0;
+  white-space: nowrap;
+  animation: ticker 10s linear infinite;
+}
+
+.ticker li {
+  display: inline-block;
+  padding: 0 15px;
+  position: relative;
+}
+
+.ticker li::before {
+  content: '•'; /* Utilizamos un punto como viñeta */
+  position: absolute;
+  left: 5px; /* Ajustamos la posición del punto */
+  color: #fff;
+}
+
+.right-content {
+  align-self: center;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #fff;
+  padding-left: 5px;
+}
+.cac-navbar-container {
+  background-color: #353434;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.img-brand {
+  max-width: 200px;
+  max-height: 120px;
+}
+.navbar-menu ul {
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-menu li {
+  display: inline-block;
+  padding-left: 10px;
+}
+
+.search-container {
+  display: flex;
+}
+
+.search-input {
+  background-color: #0d0d0d;
+  border-color: #0d0d0d;
+  border: none;
+  outline: none;
+  height: 25px;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.search-button {
+  background-color: #0d0d0d;
+  border-color: #0d0d0d;
+  border: none;
+  cursor: pointer;
+  border-radius: 0px 10px 10px 0px;
+}
+
+.search-button i {
+  color: #fff; /* Color del icono */
+}
+@keyframes ticker {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
