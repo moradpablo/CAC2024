@@ -69,9 +69,9 @@ body {
 }
 
 .ticker li::before {
-  content: '•'; /* Utilizamos un punto como viñeta */
+  content: '•';
   position: absolute;
-  left: 5px; /* Ajustamos la posición del punto */
+  left: 5px;
   color: #fff;
 }
 
@@ -129,7 +129,35 @@ a {
 }
 
 .search-button i {
-  color: #fff; /* Color del icono */
+  color: #fff;
+}
+
+.main-sections {
+  display: grid;
+  padding: 30px;
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  gap: 1em;
+}
+.sports-thumbail {
+  max-height: 500px;
+  grid-row: 1/3;
+}
+.main-sections img {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+}
+.sponsor-thumbail {
+  max-height: 500px;
+  grid-column: 3/4;
+  grid-row: 1/3;
+}
+.technology-thumbail {
+  max-height: 250px;
+  grid-column: 2/3;
+}
+.economy-thumbail {
+  max-height: 250px;
 }
 @keyframes ticker {
   0% {
@@ -137,5 +165,32 @@ a {
   }
   100% {
     transform: translateX(-100%);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .main-sections {
+    grid-template-columns: 1fr 1fr;
+  }
+  .sponsor-thumbail {
+    display: none;
+  }
+}
+@media screen and (max-width: 700px) {
+  .main-sections {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .sports-thumbail {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .technology-thumbail {
+    grid-row: 2/3;
+    grid-column: 1/2;
+  }
+  .economy-thumbail {
+    grid-row: 3/4;
+    grid-column: 1/2;
   }
 }
