@@ -367,7 +367,7 @@ main .rest-of-news-content h3{
 .main-sections {
   display: grid;
   padding: 30px;
-  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
   gap: 1em;
 }
 .sports-thumbail {
