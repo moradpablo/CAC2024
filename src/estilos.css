@@ -174,7 +174,7 @@ main{
   width: 100%;
 }
 
-main h3{
+main .rest-of-news-content h3{
   margin-bottom: 0px;
   margin-top: 0px;
 }
@@ -246,11 +246,10 @@ main h3{
 
 .article-section{
   height: 100%;
-
   display: grid;
   gap: 20px;
   grid-template-columns: 1fr 1fr;
-  grid-auto-rows: 350px;
+
 }
 
 .article-section-content img{
@@ -285,6 +284,7 @@ main h3{
 }
 
 .article-section-content-2 img{
+  height: 100%;
   width: 50%;
 }
 
