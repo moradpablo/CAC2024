@@ -4,7 +4,7 @@ html,
 body {
   font-family: 'Poppins', sans-serif;
   color: #fff;
-  background-color: #0d0d0d;
+  /* background-color: #0d0d0d; */
   font-size: 16px;
   font-weight: 400;
   margin: 0;
@@ -135,29 +135,53 @@ a {
 .main-sections {
   display: grid;
   padding: 30px;
-  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
   gap: 1em;
 }
 .sports-thumbail {
-  max-height: 500px;
+  max-height: 516px;
   grid-row: 1/3;
-}
-.main-sections img {
   border-radius: 10px;
+  overflow: hidden;
+}
+
+.sports-thumbail img,
+.technology-thumbail img,
+.economy-thumbail img {
   width: 100%;
   height: 100%;
+  border-radius: 10px;
+  transition: transform ease-in-out 0.3s, filter ease-in-out 0.3s;
 }
+
+.sports-thumbail img:hover,
+.technology-thumbail img:hover,
+.economy-thumbail img:hover {
+  transform: scale(1.1);
+  filter: brightness(70%);
+}
+
 .sponsor-thumbail {
-  max-height: 500px;
+  max-height: 516px;
   grid-column: 3/4;
   grid-row: 1/3;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.sponsor-thumbail img {
+  width: 100%;
+  height: 100%;
 }
 .technology-thumbail {
   max-height: 250px;
   grid-column: 2/3;
+  overflow: hidden;
+  border-radius: 10px;
 }
 .economy-thumbail {
   max-height: 250px;
+  overflow: hidden;
+  border-radius: 10px;
 }
 @keyframes ticker {
   0% {
