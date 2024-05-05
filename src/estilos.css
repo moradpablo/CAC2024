@@ -266,6 +266,11 @@ main h3 {
   width: 100%;
 }
 
+.containerImg{
+  overflow: hidden;
+  border-radius: 10px;
+}
+
 .current-news-section {
   display: flex;
   flex-direction: column;
@@ -335,6 +340,42 @@ main h3 {
 .economy-section h3:hover {
   color: #dc3545;
 }
+
+.economy-thumbail {
+  display: grid;
+  grid-template-columns: minmax(200px, 1fr);
+  grid-auto-rows: minmax(250px, auto);
+  background-color: #0d0d0d;
+  gap: 15px;
+}
+
+.economy-thumbail img {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+.economy-card {
+  overflow: hidden;
+  height: auto;
+  background-color: #343638;
+  border-radius: 10px;
+}
+.economy-card h4 {
+  height: 30%;
+  margin: 10px;
+}
+
+.economy-thumbail img:hover {
+  transform: scale(1.1);
+}
+
+.text-information {
+  display: none;
+}
+
 .sports-section {
   width: 100%;
   background-color: blue;
@@ -382,38 +423,7 @@ main h3 {
 }
 .technology-thumbail {
 }
-.economy-thumbail {
-  display: grid;
-  grid-template-columns: minmax(200px, 1fr);
-  grid-auto-rows: minmax(250px, auto);
-  background-color: #0d0d0d;
-  gap: 15px;
-}
-.economy-thumbail img {
-  width: 100%;
-  height: 70%;
-  object-fit: cover;
-  display: block;
-  border-radius: 10px;
-  transition: transform 0.3s ease;
-}
-.economy-card {
-  overflow: hidden;
-  height: auto;
-  background-color: #343638;
-  border-radius: 10px;
-}
-.economy-card h4 {
-  height: 30%;
-  margin: 10px;
-}
 
-.economy-thumbail img:hover {
-  transform: scale(1.1);
-}
-.text-information {
-  display: none;
-}
 /*---------------- END OF MAIN -----------------*/
 
 /*------------------ FOOTER --------------------*/
