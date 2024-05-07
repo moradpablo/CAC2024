@@ -30,8 +30,8 @@
 html,
 body {
   font-family: 'Poppins', sans-serif;
-  color: #fff;
-  background-color: #0d0d0d;
+  color: #fff !important;
+  background-color: #0d0d0d !important;
   font-size: 16px;
   font-weight: 400;
   margin: 0;
@@ -45,6 +45,7 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+
 .cac-topbar {
   color: #fff;
   background-color: #ff0000;
@@ -115,12 +116,6 @@ a {
   color: #fff;
   padding-left: 5px;
 }
-.cac-navbar-container {
-  background-color: #353434;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
 
 .img-brand {
   max-width: 200px;
@@ -145,8 +140,10 @@ a {
   border-color: #0d0d0d;
   border: none;
   outline: none;
-  height: 25px;
+  height: 35px;
   border-radius: 10px 0px 0px 10px;
+  color: white;
+  padding-left: 20px;
 }
 
 .search-button {
@@ -159,6 +156,52 @@ a {
 
 .search-button i {
   color: #fff;
+}
+
+.navbar{
+  background-color: #353434 !important;
+}
+
+.container-fluid{
+  padding-left: calc(var(--bs-gutter-x)* 2) !important;
+  padding-right: calc(var(--bs-gutter-x)* 2) !important;
+}
+
+.navbar a{
+  color: white !important;
+}
+
+.navbar-toggler{
+  color: white !important;
+  border: 2px solid rgb(190, 190, 190) !important;
+}
+
+.navbar-nav{
+  width: 100%;
+  justify-content: center;
+}
+
+.nav-link{
+  text-decoration: none;
+  position: relative;
+}
+
+.nav-link::after{
+  content: "";
+  position: absolute;
+  height: 2px;
+  background-color: rgb(255, 255, 255);
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  transition: transform 0.75s;
+  transform-origin: bottom right;
+  transform: scaleX(0);
+}
+
+.nav-link:hover::after{
+  transform-origin: bottom left;
+  transform: scaleX(1);
 }
 
 /*-------------- END OF HEADER ----------------*/
