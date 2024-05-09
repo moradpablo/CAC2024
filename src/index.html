@@ -7,11 +7,14 @@
 
     <link rel="stylesheet" href="estilos.css" />
     <title>Practico CAC</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
   </head>
   <body>
     <header class="cac-header">
       <div class="cac-topbar">
-        <div class="container">
+        <div class="breaking-container">
           <div class="cac-topbar-container">
             <div class="left-content">
               <div class="breaking-news">
@@ -34,103 +37,119 @@
           </div>
         </div>
       </div>
-      <div class="cac-menu-content">
-        <div class="container">
-          <div class="cac-navbar-container">
+
+      <nav class="navbar navbar-dark navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
             <img src="../public/assets/brand.png" alt="brand-logo-microphone" class="img-brand" />
-            <div class="navbar-menu">
-              <ul>
-                <li><a>Actualidad</a></li>
-                <li><a>Policiales</a></li>
-                <li><a href="#economy">Economia</a></li>
-                <li><a>Tecnologia</a></li>
-                <li><a>Deportes</a></li>
-                <li><a>Conociendo Argentina</a></li>
-              </ul>
-            </div>
-            <div class="search-container">
-              <input type="text" name="search" placeholder="Search here.." class="search-input" />
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="#current-news">Actualidad</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Policiales</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#economy">Economía</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#technology">Tecnología</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#sports">Deportes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Conociendo Argentina</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input type="text" name="search" placeholder="Buscar artículo" class="search-input" />
               <button type="submit" class="search-button">
                 <i class="fa-solid fa-magnifying-glass"></i>
               </button>
-            </div>
+            </form>
           </div>
         </div>
-      </div>
+      </nav>
     </header>
     <main>
       <section class="breaking-news-section">
         <div class="img-container">
-          <!-- <img src="https://media.todojujuy.com/p/5c721d230c3202765a611b55fc42c63d/adjuntos/227/imagenes/003/345/0003345863/1200x675/smart/imagepng.png" alt=""> -->
         </div>
         <article class="breaking-news-article-content">
-          <h3>Copa de la Liga</h3>
-          <h2>Estudiantes avanzó a la final</h2>
+          <h3>Paro general de la CGT</h3>
+          <h2>Muchos comercios abiertos y circulan algunos colectivos en el AMBA</h2>
           <div class="breaking-news-article-content-text">
             <p>
-              Tras igualar 1-1 en el tiempo regular, Estudiantes le ganó a Boca 3-1 por penales y avanzó a la final de
-              la Copa de la Liga.<br />El próximo domingo Estudiantes jugará su tercera final en seis meses. Será en
-              este caso ante Vélez en Santiago del Estero.
+              El segundo paro general contra el gobierno del presidente Javier Milei también se siente en las redes sociales, donde dirigentes del oficialismo y la oposición cruzan sus posturas y en algunos casos insultos por la medida de la Confederación General del Trabajo.
             </p>
           </div>
         </article>
       </section>
 
       <section class="rest-of-news-content">
-        <section class="current-news-section">
+        
+        <section id="current-news" class="current-news-section">
           <div class="title-section">
             <h2>ACTUALIDAD</h2>
             <hr class="solid" />
           </div>
-          <section class="article-section">
-            <article class="current-news-article-1">
-              <div class="article-section-content">
+          <section class="current-news-thumbail">
+            <article class="current-news-card">
+              <div class="containerImg">
                 <img
                   src="https://media.lacapital.com.ar/p/6db7fbc89df4146b045934ff551602f9/adjuntos/203/imagenes/101/414/0101414214/514x288/smart/javie-mileijpg.jpg"
                   alt=""
                 />
-                <h2>Mensaje de Javier Milei a la "mayoría silenciosa" por el Día del Trabajador</h2>
-                <p>
+              </div>
+                <h4>Mensaje de Javier Milei a la "mayoría silenciosa" por el Día del Trabajador</h4>
+                <p class="">
                   El gobierno nacional publicó un particular mensaje en el marco del Día del Trabajador, que se celebra
                   este miércoles 1º de mayo. Mediante un video, que cuenta con la voz en off del presidente Javier
                   Milei, saludó a "la mayoría silenciosa".
                 </p>
-              </div>
             </article>
-            <article class="current-news-article-2">
-              <div class="article-section-content-2">
+            <article class="current-news-card">
+              <div class="containerImg">
                 <img
                   src="https://images.pagina12.com.ar/styles/focal_3_2_960x640/public/2024-04/835536-israel-20ia.jpg?h=91b8c1c6&itok=JnLd7W1g"
                   alt=""
                 />
+              </div>
                 <div class="article-text-content">
-                  <h2>Israel usa la inteligencia artificial como arma en la Franja de Gaza</h2>
+                  <h4>Israel usa la inteligencia artificial como arma en la Franja de Gaza</h4>
                   <p>
                     La falta de regulación tecnológica en contextos bélicos puede sentar un precedente difícil de
                     revertir. "Netanyahu utiliza el reconocimiento facial para identificar a las familias palestinas sin
                     su consentimiento", advierten los expertos.
                   </p>
                 </div>
-              </div>
             </article>
-            <div class="article-section-content-3">
-              <img
+            <div class="current-news-card">
+              <div class="containerImg">
+                <img
                 src="https://img.asmedia.epimg.net/resizer/v2/ZHN4IBF5VFC33MDJ7DNSICMHYE.jpg?auth=ce733af573b6c51e01d57a111cb787dd22462ac9859ea5007241cb342d09de1e&width=644&height=362&smart=true"
                 alt=""
               />
+              </div>
+
               <div class="article-text-content">
-                <h2>
+                <h4>
                   Anunciados los juegos de PS Plus Essential en mayo de 2024 para PS5 y PS4: EA SPORTS FC 24 es la bomba
                   del mes
-                </h2>
+                </h4>
                 <p>
                   El sucesor de FIFA es uno de los juegos más destacados en la nueva lista de títulos que llegan al
                   catálogo de PlayStation Plus.
                 </p>
               </div>
             </div>
-            <article class="current-news-article-4"></article>
-            <article class="current-news-article-5"></article>
           </section>
         </section>
 
@@ -141,7 +160,9 @@
           </div>
           <article class="economy-thumbail">
             <div class="economy-card">
-              <img src="../public/assets/doctor.png" alt="doctor-talking-to-pacient" />
+              <div class="containerImg">
+                <img src="../public/assets/doctor.png" alt="doctor-talking-to-pacient" />
+              </div>
               <h4>
                 Prepagas: cuánto deberían bajar las cuotas de mayo tras la orden del Gobierno de retrotraer precios
               </h4>
@@ -153,7 +174,9 @@
               </p>
             </div>
             <div class="economy-card">
-              <img src="../public/assets/powell.png" alt="powell-speech-from-the-federal-reserve" />
+              <div class="containerImg">
+                <img src="../public/assets/powell.png" alt="powell-speech-from-the-federal-reserve" />
+              </div>
               <h4>
                 EEUU ratificó las tasas en su rango más alto en 23 años: cómo va a afectar a la economía argentina
               </h4>
@@ -163,7 +186,9 @@
               </p>
             </div>
             <div class="economy-card">
-              <img src="../public/assets/qrpay.jpg" alt="senior-paying-with-qr-code" />
+              <div class="containerImg">
+                <img src="../public/assets/qrpay.jpg" alt="senior-paying-with-qr-code" />
+              </div>
               <h4>
                 Aprueban el plazo fijo electrónico y la interoperabilidad de los códigos QR para el pago con tarjetas de
                 crédito
@@ -176,24 +201,51 @@
           </article>
         </section>
 
-        <section class="sports-section">
+        <section id="sports" class="sports-section">
           <div class="title-section">
             <h2>DEPORTES</h2>
             <hr class="solid" />
           </div>
           <article class="sports-article">
-            <img src="../public/assets/run.jpg" alt="runner" />
+              <article class="sports-thumbail">
+                <div class="sports-card">
+                  <div class="containerImg">
+                    <img src="https://www.ole.com.ar/images/2024/05/05/4i-T8aos2_1290x760__1.jpg" alt="">
+                  </div>
+                  <h4>Estudiantes campeón de la Copa de la Liga</h4>
+                  <p class="">Estudiantes de La Plata se coronó campeón este domingo de la Copa de la Liga Profesional tras vencer por penales a Vélez Sarsfield por 4-3 en la tanda de penales. Habían igualado 0-0 en los 90 y nada cambió en el tiempo extra.</p>
+                </div>
+                <div class="sports-card">
+                  <div class="containerImg">
+                    <img src="https://www.infobae.com/new-resizer/AFDYPU_wvsLwqvqA_6STOKkmtL0=/992x661/filters:format(webp):quality(85)/cloudfront-us-east-1.images.arcpublishing.com/infobae/4YJSLMT4IMVBIL2UXL22AMXZB4.jpg" alt="">
+                  </div>
+                  <h4>Diego Schwartzman anunció su retiro del tenis profesional</h4>
+                  <p class="">Diego Schwartzman anunció su retiro del tenis para 2025. Con una extensa carta que subió en sus redes sociales, el Peque confirmó que continuará jugando en 2024 y que el año próximo dirá adiós en su país.</p>
+                </div>
+                <div class="sports-card">
+                  <div class="containerImg">
+                    <img src="https://www.lavoz.com.ar/resizer/1E9Uq35SEefd6hGEEso48YkBXH4=/0x0:0x0/980x640/filters:quality(80):format(webp)/cloudfront-us-east-1.images.arcpublishing.com/grupoclarin/GTFOAY5RXRB5RBKALVRII3J3LI.jpg" alt="">
+                  </div>
+                  <h4>La nueva vida de Manu Ginóbili: Esta es mi primera obra de arte</h4>
+                  <p class="">Retirado hace mucho tiempo del básquetbol profesional, el bahiense emprende una nueva actividad, la pintura y el dibujo.</p>
+                </div>
+                <div class="sports-card">
+                  <div class="containerImg">
+                    <img src="https://www.infobae.com/new-resizer/VQ7-5wF5RyQGH4VwhbI3lgr6cG4=/992x606/filters:format(webp):quality(85)/cloudfront-us-east-1.images.arcpublishing.com/infobae/KQ2PJT3BY4QAZRBG47MQU27A4M.jpg" alt="">
+                  </div>
+                  <h4>Lando Norris venció con McLaren en el GP de Miami y logró su primer triunfo en Fórmula 1 en la mejor carrera del año</h4>
+                  <p class="">Luego de 111 Grandes Premios, el inglés se impuso con la histórica escudería inglesa, que volvió a la victoria luego de casi tres años. Segundo fue Max Verstappen, quien sigue siendo el líder del campeonato con su Red Bull, y tercero resultó Charles Leclerc, con Ferrari</p>
+                </div>
+              </article>
           </article>
         </section>
 
-        <section class="technology-section">
+        <section id="technology" class="technology-section">
           <div class="title-section">
             <h2>TECNOLOGÍA</h2>
             <hr class="solid" />
           </div>
-          <article class="technology-article">
-            <img src="../public/assets/technology.jpg" alt="" />
-          </article>
+
         </section>
 
         <section class="knowing-argentina-section">
@@ -206,9 +258,30 @@
         <section class="contact-form-section"></section>
       </section>
 
-      <h1>HOLA MUNDO!</h1>
     </main>
 
-    <footer></footer>
+    <footer>
+      <h3>Seguinos en nuestras redes!</h3>
+      <div class="footer-content">
+        <a href="#" class="instagram-social">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        
+        <a href="#" class="facebook-social">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="#" class="twitter-social">
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+        <a href="#" class="tiktok-social">
+          <i class="fa-brands fa-tiktok"></i>
+        </a>
+      </div>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/f8fec4fe05.js" crossorigin="anonymous"></script>
+
   </body>
 </html>
