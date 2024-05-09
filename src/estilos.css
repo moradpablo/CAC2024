@@ -224,16 +224,16 @@ main h3 {
 
 .breaking-news-section {
   width: 100%;
-  height: 400px;
-  background-color: turquoise;
+  background-color: rgb(13, 13, 13);
   display: flex;
+  flex-direction: column;
   justify-content: flex-end;
   position: relative;
   overflow: hidden;
 }
 
 .breaking-news-section .img-container {
-  position: absolute;
+  position: relative;
   width: 100%;
   height: 400px; /* Parámetro que deberáa ajustarse manualmente al subir la imagen */
   background-image: linear-gradient(
@@ -243,21 +243,16 @@ main h3 {
       rgba(13, 13, 13, 0.1) 70%,
       rgb(13, 13, 13, 1) 100%
     ),
-    url('https://media.todojujuy.com/p/5c721d230c3202765a611b55fc42c63d/adjuntos/227/imagenes/003/345/0003345863/1200x675/smart/imagepng.png');
+    url('https://www.mediatiko.com/wp-content/uploads/2024/01/argentina-huelga-2.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 100% 15%;
 }
 
-.breaking-news-section .img-container img {
-  position: absolute;
-  width: 100%;
-  height: auto;
-  top: -100px; /* Parámetro que deberáa ajustarse manualmente al subir la imagen */
-}
+
 
 .breaking-news-article-content {
-  width: 40%;
+  width: 100%;
   height: 100%;
   background: linear-gradient(
     90deg,
@@ -266,7 +261,7 @@ main h3 {
     rgba(13, 13, 13, 0.8) 40%,
     rgb(13, 13, 13, 1) 100%
   );
-  position: absolute;
+  position: relative;
   padding-right: 7%;
   padding-top: 20px;
   text-align: justify;
@@ -521,6 +516,21 @@ main h3 {
 }
 
 @media screen and (min-width: 768px) { 
+
+  .breaking-news-section {
+    flex-direction: row;
+    height: 400px;
+  }
+
+  .breaking-news-section .img-container {
+    position: absolute;
+  }
+
+  .breaking-news-article-content {
+    position: absolute;
+    width: 40%;
+  }
+
   .economy-thumbail {
     grid-template-columns: 1fr 1fr;
   }
@@ -563,7 +573,14 @@ main h3 {
     height: auto;
   }
 
+  .footer-content{
+    width: 400px !important;
+    font-size: 40px !important;
+  }
 
+  footer h3 {
+    font-size: 24px !important;
+  }
 }
 
 @media screen and (min-width: 1366px) {
@@ -620,6 +637,8 @@ main h3 {
   .sports-card:nth-child(1) p {
     font-size:20px;
   }
+
+
 }
 
 footer{
@@ -639,10 +658,14 @@ footer{
 .footer-content{
   display: flex;
   justify-content: space-between;
-  width: 400px;
+  width: 300px;
   color: #dc3545;
-  font-size: 40px;
+  font-size: 20px;
   padding: 10px 40px 40px ;
+}
+
+footer h3 {
+  font-size: 16px;
 }
 
 .instagram-social{
