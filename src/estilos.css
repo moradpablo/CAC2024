@@ -346,7 +346,8 @@ main h3 {
   transform: scale(1.1);
 }
 
-.containerImg {
+.containerImg,
+.technology-containerImg {
   overflow: hidden;
   border-radius: 10px;
 }
@@ -371,7 +372,8 @@ main h3 {
   margin: 10px;
 }
 
-.economy-thumbail img:hover {
+.economy-thumbail img:hover,
+.technology-thumbail img:hover {
   transform: scale(1.1);
 }
 
@@ -392,7 +394,8 @@ main h3 {
 }
 
 .sports-thumbail,
-.economy-thumbail {
+.economy-thumbail,
+.technology-thumbail {
   display: grid;
   grid-template-columns: minmax(200px, 1fr);
   grid-auto-rows: minmax(250px, auto);
@@ -401,9 +404,10 @@ main h3 {
 }
 
 .sports-thumbail img,
-.economy-thumbail img {
+.economy-thumbail img,
+.technology-thumbail img {
   width: 100%;
-  height: 70%;
+  height: 100%;
   object-fit: cover;
   display: block;
   border-radius: 10px;
@@ -411,7 +415,8 @@ main h3 {
 }
 
 .sports-card,
-.economy-card {
+.economy-card,
+.technology-card {
   overflow: hidden;
   height: auto;
   border-radius: 10px;
@@ -421,7 +426,8 @@ main h3 {
 }
 
 .sports-card::before,
-.economy-card::before {
+.economy-card::before,
+.technology-card::before {
   position: absolute;
   content: '';
   top: 0;
@@ -435,7 +441,8 @@ main h3 {
 }
 
 .sports-card:hover::before,
-.economy-card:hover::before {
+.economy-card:hover::before,
+.technology-card:hover::before {
   opacity: 1;
 }
 
@@ -453,7 +460,6 @@ main h3 {
 
 .technology-section {
   width: 100%;
-  background-color: violet;
 }
 
 .technology-article {
@@ -616,6 +622,28 @@ main h3 {
     font-size: 0.9rem;
     min-height: 100px;
     margin: 10px;
+  }
+
+  .technology-thumbail {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .technology-card {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px
+  }
+  
+  .technology-containerImg {
+    grid-column: 1/2;
+    grid-row: 1 / span 2;
+    align-self: stretch
+  }
+  
+  .text-information {
+    grid-column: 2 / 2;
   }
 
   .sports-thumbail {
