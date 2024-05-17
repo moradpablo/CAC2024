@@ -387,6 +387,10 @@ main h3 {
 
 .sports-article {
 }
+.right-content a {
+  text-decoration: none;
+  color: #fff;
+}
 
 .sports-article img {
   width: 400px;
@@ -530,6 +534,9 @@ main h3 {
   font-size: 16px;
   padding: 10px;
 }
+.drop-down {
+  margin-left: 20px;
+}
 .input-form {
   display: flex;
   flex-direction: column;
@@ -537,7 +544,8 @@ main h3 {
   align-items: center;
   width: 100%;
 }
-.input-form input {
+.input-form input,
+.drop-down {
   width: 90%;
   height: 45px;
   border-radius: 4px;
