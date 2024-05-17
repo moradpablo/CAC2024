@@ -1,3 +1,20 @@
+const newsletterModal = document.getElementById('modalNewsletter');
+
+const newsletter = localStorage.getItem("newsletter");
+
+onload = function () {
+    
+
+
+    this.setTimeout(()=>{
+        if( newsletter !== "false"){
+            this.localStorage.setItem("newsletter","false");
+            newsletterModal.style.display = 'flex';
+        }
+    },3000);
+
+};
+
 document.addEventListener('DOMContentLoaded', function () {
   const modal = document.getElementById('modal');
   const loginBtn = document.getElementById('login-btn');
