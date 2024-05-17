@@ -30,9 +30,9 @@
             </div>
             <div class="right-content">
               <i class="fa-regular fa-circle-user"></i>
-              <a href="login.html">Login</a>
+              <a href="login.html" id="login-btn">Login</a>
               /
-              <a href="login.html">SignUp</a>
+              <a href="login.html" id="signup-btn">SignUp</a>
             </div>
           </div>
         </div>
@@ -99,8 +99,7 @@
             <hr class="solid" />
           </div>
           <section id="current-news" class="current-news-section">
-            <section id="present" class="current-news-section">
-              
+            <section id="present" class="current-news-section"> 
               <div id="carouselExampleCaptions" class="carousel slide" ">
                 <div class="carousel-indicators">
                   <button
@@ -357,6 +356,42 @@
               </div>
             </article>
         </section>
+        <div id="modal" class="modal">
+        <div class="form-container">
+          <h1 class="title-login">User Login</h1>
+          <h1 class="title-signup">Create an Account</h1>
+          <form class="form-login">
+            <div class="input-form">
+            <label>Email</label>
+            <input type="email" name="email" required="required" placeholder="demo@gmail.com">
+            </div>
+            <div class="input-form">
+            <label>Password</label>
+            <input type="password" name="password" required="required" placeholder="********">
+          </div>
+          <button class="btn-login-form" id="login">Login</button>
+        </form>
+          <form class="form-signup">
+            <div class="input-form">
+              <label>First Name</label>
+              <input type="text" name="name" required="required" placeholder="First Name">
+            </div>
+            <div class="input-form">
+              <label>Last Name</label>
+              <input type="text" name="last-name" required="required" placeholder="Last Name">
+            </div>
+            <div class="input-form">
+              <label>Email</label>
+              <input type="email" name="email" required="required" placeholder="demo@gmail.com">
+            </div>
+            <div class="input-form">
+              <label>Password</label>
+              <input type="password" name="password" required="required" placeholder="********">
+          </div>
+            <button class="btn-sign-up-form" id="signup">Sign Up</button>
+          </form>
+        </div>
+      </div>
 
         <section class="knowing-argentina-section">
           <div class="title-section">
@@ -392,6 +427,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/f8fec4fe05.js" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
     
   </body>
 </html>
