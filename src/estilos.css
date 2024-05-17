@@ -633,7 +633,7 @@ main h3 {
   .technology-card {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    gap: 20px;
+    gap: 20px
   }
   
   .technology-containerImg {
