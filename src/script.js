@@ -1,18 +1,13 @@
 const newsletterModal = document.getElementById('modalNewsletter');
 
-const newsletter = localStorage.getItem("newsletter");
+const newsletter = localStorage.getItem('newsletter');
 
 onload = function () {
-    
-
-
-    this.setTimeout(()=>{
-        if( newsletter !== "false"){
-            this.localStorage.setItem("newsletter","false");
-            newsletterModal.style.display = 'flex';
-        }
-    },3000);
-
+  this.setTimeout(() => {
+    if (newsletter !== 'false') {
+      newsletterModal.style.display = 'flex';
+    }
+  }, 1000);
 };
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -23,6 +18,19 @@ document.addEventListener('DOMContentLoaded', function () {
   const titleSignUp = document.querySelector('.title-signup');
   const formLogin = document.querySelector('.form-login');
   const formSignUp = document.querySelector('.form-signup');
+  const newsLetterbtn = document.getElementById('newsLetterOk');
+  const newsLetterBtnCancel = document.getElementById('newsLetterCancel');
+
+  newsLetterBtnCancel.addEventListener('click', (e) => {
+    e.preventDefault;
+    newsletterModal.style.display = 'none';
+  });
+
+  newsLetterbtn.addEventListener('click', (e) => {
+    e.preventDefault;
+    localStorage.setItem('newsletter', 'false');
+    /* newsletterModal.style.display = 'none'; */
+  });
 
   loginBtn.addEventListener('click', function (e) {
     e.preventDefault();

@@ -511,14 +511,20 @@ main h3 {
   height: auto;
 }
 .form-container h1,
-.form-container label {
+.form-container label,
+.form-container h2 {
   color: #343638;
+}
+.form-container h2 {
+  text-align: center;
+  font-size: 14px;
+  padding: 6px;
 }
 .form-container h1 {
   text-align: center;
   padding: 10px;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 20px;
 }
 .form-container label {
   font-size: 16px;
@@ -575,12 +581,29 @@ main h3 {
   right: 20px;
 }
 
-.form-signup {
+.form-signup,
+#modalNewsletter {
   display: none;
 }
-
-#modalNewsletter{
-  display: none;
+.newsLetterSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+}
+.newsLetterSection :nth-child(7) {
+  grid-column: 1/3;
+}
+.sections {
+  padding: 10px;
+}
+.btn-newLetter-cancel,
+.btn-newLetter {
+  background-color: #ff0000;
+  border-radius: 4px;
+  border: 1px solid #ff0000;
+  color: #fff;
+  margin: 15px;
+  padding: 10px;
 }
 
 /*---------------- END OF MAIN -----------------*/
@@ -722,19 +745,19 @@ main h3 {
     grid-template-columns: 1fr;
     gap: 20px;
   }
-  
+
   .technology-card {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    gap: 20px
+    gap: 20px;
   }
-  
+
   .technology-containerImg {
     grid-column: 1/2;
     grid-row: 1 / span 2;
-    align-self: stretch
+    align-self: stretch;
   }
-  
+
   .text-information {
     grid-column: 2 / 2;
   }
