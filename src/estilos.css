@@ -60,7 +60,7 @@ body {
 }
 
 .left-content {
-  max-width: 60%;
+  max-width: 90%;
 }
 .right-content {
   width: 20vw;
@@ -78,7 +78,7 @@ body {
 .breaking-news {
   display: flex;
   align-items: center;
-  width: 60vw;
+  width: 70vw;
 }
 .ticker {
   width: 100%;
@@ -89,7 +89,7 @@ body {
   padding: 0;
   margin: 0;
   white-space: nowrap;
-  animation: ticker 10s linear infinite;
+  animation: ticker 40s linear infinite;
 }
 
 .ticker li {
@@ -280,6 +280,10 @@ main h3 {
   background-color: turquoise;
 }
 
+.justify-section{
+  margin-top: 50px;
+}
+
 .rest-of-news-content {
   width: 85%;
   display: flex;
@@ -387,6 +391,7 @@ main h3 {
 
 .sports-article {
 }
+
 .right-content a {
   text-decoration: none;
   color: #fff;
@@ -503,6 +508,10 @@ main h3 {
   background-color: #fff;
 }
 
+.controlContent{
+  text-align: center;
+}
+
 .modal .form-container {
   padding-top: 40px;
   background-color: #fff;
@@ -534,9 +543,7 @@ main h3 {
   font-size: 16px;
   padding: 10px;
 }
-.drop-down {
-  margin-left: 20px;
-}
+
 .input-form {
   display: flex;
   flex-direction: column;
@@ -544,6 +551,7 @@ main h3 {
   align-items: center;
   width: 100%;
 }
+
 .input-form input,
 .drop-down {
   width: 90%;
@@ -589,10 +597,38 @@ main h3 {
   right: 20px;
 }
 
-.form-signup,
-#modalNewsletter {
+.form-signup{
   display: none;
 }
+
+.modalNewsletter{
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  opacity: 0;
+  transition: opacity 0.5s linear;
+}
+
+.modalNewsletterFadeIn{
+  opacity: 1;
+}
+
+.modalContainer{
+  background-color: #acacac;
+  width: 400px;
+  padding: 20px;
+  border-radius: 4px;
+}
+
 .newsLetterSection {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -604,14 +640,31 @@ main h3 {
 .sections {
   padding: 10px;
 }
-.btn-newLetter-cancel,
-.btn-newLetter {
-  background-color: #ff0000;
+
+.newsletterButtonContent{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-newsletter-cancel,
+.btn-newsletter-ok {
   border-radius: 4px;
-  border: 1px solid #ff0000;
+  
   color: #fff;
   margin: 15px;
   padding: 10px;
+  width: 100%;
+}
+
+.btn-newsletter-cancel{
+  background-color: #ff0000;
+  border: 1px solid #ff0000;
+}
+
+.btn-newsletter-ok{
+  background-color: rgb(19, 72, 216);
+  border: 1px solid rgb(19, 72, 216);
 }
 
 /*---------------- END OF MAIN -----------------*/
@@ -622,10 +675,10 @@ main h3 {
 
 @keyframes ticker {
   0% {
-    transform: translateX(100%);
+    transform: translateX(110%);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-280%); /*Modificar dinámicamente este valor dependiendo de la cantidad de caracteres que haya entre todos los elementos "li"*/
   }
 }
 

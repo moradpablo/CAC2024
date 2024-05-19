@@ -1,13 +1,19 @@
-const newsletterModal = document.getElementById('modalNewsletter');
+const provinciasArgentinas = ['Buenos Aires', 'Catamarca', 'Chaco', 'Chubut', 'Córdoba', 'Corrientes', 'Entre Rios',
+                              'Formosa', 'Jujuy', 'La Pampa', 'La Rioja', 'Mendoza', 'Misiones', 'Neuquén', 'Río Negro', 
+                              'Salta', 'San Juan', 'San Luis', 'Santa Cruz', 'Santa Fe', 'Santiago del Estero', 'Tierra del Fuego', 'Tucumán'];
+
+const newsletterModal = document.querySelector('.modalNewsletter');
+const bodyWeb = document.querySelector('body');
 
 const newsletter = localStorage.getItem('newsletter');
 
 onload = function () {
   this.setTimeout(() => {
     if (newsletter !== 'false') {
-      newsletterModal.style.display = 'flex';
+      bodyWeb.style.overflow = "hidden";
+      newsletterModal.classList.add('modalNewsletterFadeIn');
     }
-  }, 1000);
+  }, 2000);
 };
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -20,15 +26,20 @@ document.addEventListener('DOMContentLoaded', function () {
   const formSignUp = document.querySelector('.form-signup');
   const newsLetterbtn = document.getElementById('newsLetterOk');
   const newsLetterBtnCancel = document.getElementById('newsLetterCancel');
+  const dropDownProvincias = document.getElementById('dropDownProvincias');
+
+  cargaProvinciasDropDown(dropDownProvincias);
 
   newsLetterBtnCancel.addEventListener('click', (e) => {
     e.preventDefault;
     newsletterModal.style.display = 'none';
+    bodyWeb.style.overflowY = "scroll";
   });
 
   newsLetterbtn.addEventListener('click', (e) => {
     e.preventDefault;
     localStorage.setItem('newsletter', 'false');
+    bodyWeb.style.overflowY = "scroll";
     /* newsletterModal.style.display = 'none'; */
   });
 
@@ -56,3 +67,19 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   };
 });
+
+
+function cargaProvinciasDropDown(dropDown){
+  for(indice in provinciasArgentinas){
+
+    let option = document.createElement('OPTION');
+
+    option.setAttribute('value',indice);
+
+    const nombreProvincia = document.createTextNode(provinciasArgentinas[indice]);
+    option.appendChild(nombreProvincia);
+
+    dropDown.appendChild(option);
+    console.log(option);
+  }
+}
