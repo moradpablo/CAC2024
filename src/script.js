@@ -4,6 +4,8 @@ const userName = document.querySelector('input[name="email"]');
 const passwordField = document.querySelector('input[name="password"]');
 const userNameSign = document.querySelector('input[name="email-signup"]');
 const passwordFieldSign = document.querySelector('input[name="password-signup"]');
+const firstName = document.getElementById('input-name');
+const lastNameInput = document.getElementById('input-last-name');
 
 onload = function () {
   this.setTimeout(() => {
@@ -12,7 +14,22 @@ onload = function () {
     }
   }, 3000);
 };
-
+function validateName() {
+  let name = firstName.value;
+  let p = firstName.nextElementSibling;
+  if (name.length <= 0) {
+    firstName.classList.add('input-red');
+    p.textContent = 'Name is empty!';
+  }
+}
+function validateLastName() {
+  let lastName = lastNameInput.value;
+  let p = lastNameInput.nextElementSibling;
+  if (lastName.length <= 0) {
+    lastNameInput.classList.add('input-red');
+    p.textContent = 'Last name is empty!';
+  }
+}
 function validatePassword() {
   let pass = passwordField.value;
   let p = passwordField.nextElementSibling;
@@ -112,6 +129,23 @@ function validateEmailSign() {
     return true;
   }
 }
+firstName.addEventListener('blur', validateName);
+firstName.addEventListener('focus', function () {
+  this.classList.remove('red-border');
+  let p = this.nextElementSibling;
+  if (p && p.classList.contains('input-p')) {
+    p.textContent = '';
+  }
+});
+
+lastNameInput.addEventListener('blur', validateLastName);
+lastNameInput.addEventListener('focus', function () {
+  this.classList.remove('red-border');
+  let p = this.nextElementSibling;
+  if (p && p.classList.contains('input-p')) {
+    p.textContent = '';
+  }
+});
 
 userName.addEventListener('blur', validateEmail);
 userName.addEventListener('focus', function () {
@@ -147,49 +181,46 @@ passwordFieldSign.addEventListener('focus', function () {
   }
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-  const modal = document.getElementById('modal');
-  const loginBtn = document.getElementById('login-btn');
-  const signupBtn = document.getElementById('signup-btn');
-  const titleLogin = document.querySelector('.title-login');
-  const titleSignUp = document.querySelector('.title-signup');
-  const formLogin = document.querySelector('.form-login');
-  const formSignUp = document.querySelector('.form-signup');
-  const newsLetterbtn = document.getElementById('newsLetterOk');
-  const newsLetterBtnCancel = document.getElementById('newsLetterCancel');
+const modal = document.getElementById('modal');
+const loginBtn = document.getElementById('login-btn');
+const signupBtn = document.getElementById('signup-btn');
+const titleLogin = document.querySelector('.title-login');
+const titleSignUp = document.querySelector('.title-signup');
+const formLogin = document.querySelector('.form-login');
+const formSignUp = document.querySelector('.form-signup');
+const newsLetterbtn = document.getElementById('newsLetterOk');
+const newsLetterBtnCancel = document.getElementById('newsLetterCancel');
 
-  newsLetterBtnCancel.addEventListener('click', (e) => {
-    e.preventDefault;
-    newsletterModal.style.display = 'none';
-  });
-
-  newsLetterbtn.addEventListener('click', (e) => {
-    e.preventDefault;
-    localStorage.setItem('newsletter', 'false');
-    /* newsletterModal.style.display = 'none'; */
-  });
-
-  loginBtn.addEventListener('click', function (e) {
-    e.preventDefault();
-    modal.style.display = 'flex';
-    titleLogin.style.display = 'block';
-    titleSignUp.style.display = 'none';
-    formSignUp.style.display = 'none';
-    formLogin.style.display = 'block';
-  });
-
-  signupBtn.addEventListener('click', function (e) {
-    e.preventDefault();
-    modal.style.display = 'flex';
-    titleSignUp.style.display = 'block';
-    titleLogin.style.display = 'none';
-    formSignUp.style.display = 'block';
-    formLogin.style.display = 'none';
-  });
-
-  window.onclick = function (event) {
-    if (event.target == modal) {
-      modal.style.display = 'none';
-    }
-  };
+newsLetterBtnCancel.addEventListener('click', (e) => {
+  e.preventDefault;
+  newsletterModal.style.display = 'none';
 });
+
+newsLetterbtn.addEventListener('click', (e) => {
+  e.preventDefault;
+  localStorage.setItem('newsletter', 'false');
+});
+
+loginBtn.addEventListener('click', function (e) {
+  e.preventDefault();
+  modal.style.display = 'flex';
+  titleLogin.style.display = 'block';
+  titleSignUp.style.display = 'none';
+  formSignUp.style.display = 'none';
+  formLogin.style.display = 'block';
+});
+
+signupBtn.addEventListener('click', function (e) {
+  e.preventDefault();
+  modal.style.display = 'flex';
+  titleSignUp.style.display = 'block';
+  titleLogin.style.display = 'none';
+  formSignUp.style.display = 'block';
+  formLogin.style.display = 'none';
+});
+
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = 'none';
+  }
+};
