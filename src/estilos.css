@@ -550,6 +550,7 @@ main h3 {
   text-align: center;
   align-items: center;
   width: 100%;
+  margin-bottom: 15px;
 }
 
 .input-form input,
@@ -558,7 +559,7 @@ main h3 {
   height: 45px;
   border-radius: 4px;
   padding: 6px 20px;
-  margin-bottom: 30px;
+
   border: 1px solid #d8e2e9;
 }
 .form-login,
@@ -606,7 +607,7 @@ main h3 {
   display: flex;
   top: 0;
   left: 0;
-  z-index: 999;
+  z-index: -9999;
   width: 100%;
   height: 100%;
   overflow: auto;
@@ -906,3 +907,22 @@ footer h3 {
 .tiktok-social:hover {
   color: rgb(170, 63, 63);
 }
+
+
+.mensajeErrorValidacion{
+  color: rgb(117, 0, 0);
+  background-color: #ff808d;
+}
+
+.campoErrorValidacion{
+  border: solid px red;
+  box-shadow: 0 0 10px red;
+  background-color: #ffb0b8;
+}
+
+
+span{
+  margin-top: 10px;
+}
+
+.sections:has(input:checked){font-weight: bold; color: #660000;}
