@@ -232,15 +232,10 @@ const newsLetterbtn = document.getElementById('newsLetterOk');
 const newsLetterBtnCancel = document.getElementById('newsLetterCancel');
 
 newsLetterBtnCancel.addEventListener('click', (e) => {
-  e.preventDefault;
+  e.preventDefault();
   newsletterModal.style.display = 'none';
   bodyWeb.style.overflowY = 'scroll';
   bodyWeb.style.zIndex = '-999';
-});
-
-newsLetterbtn.addEventListener('click', (e) => {
-  e.preventDefault;
-  /* newsletterModal.style.display = 'none'; */
 });
 
 loginBtn.addEventListener('click', function (e) {
@@ -338,7 +333,7 @@ function checkSectionsLength() {
 
 newsletterForm.addEventListener('submit', (e) => {
   e.preventDefault();
-  console.log(e);
+
   checkSectionsLength();
   let submitFlag = true;
 
@@ -387,5 +382,4 @@ newsletterForm.addEventListener('submit', (e) => {
     e.target.submit();
   }
 });
-
 // End Newsletter Form Validation ------------------------------------------------------------------

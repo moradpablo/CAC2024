@@ -280,7 +280,7 @@ main h3 {
   background-color: turquoise;
 }
 
-.justify-section{
+.justify-section {
   margin-top: 50px;
 }
 
@@ -508,7 +508,7 @@ main h3 {
   background-color: #fff;
 }
 
-.controlContent{
+.controlContent {
   text-align: center;
 }
 
@@ -556,7 +556,8 @@ main h3 {
 .input-last-name,
 .input-password,
 .input-first-name,
-.drop-down {
+.drop-down,
+.input-form input {
   width: 90%;
   height: 45px;
   border-radius: 4px;
@@ -599,11 +600,11 @@ main h3 {
   right: 20px;
 }
 
-.form-signup{
+.form-signup {
   display: none;
 }
 
-.modalNewsletter{
+.modalNewsletter {
   position: fixed;
   display: flex;
   top: 0;
@@ -620,11 +621,11 @@ main h3 {
   transition: opacity 0.5s linear;
 }
 
-.modalNewsletterFadeIn{
+.modalNewsletterFadeIn {
   opacity: 1;
 }
 
-.modalContainer{
+.modalContainer {
   background-color: #acacac;
   width: 400px;
   padding: 20px;
@@ -643,7 +644,7 @@ main h3 {
   padding: 10px;
 }
 
-.newsletterButtonContent{
+.newsletterButtonContent {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -652,17 +653,17 @@ main h3 {
 .btn-newsletter-cancel,
 .btn-newsletter-ok {
   border-radius: 4px;
-  
+
   color: #fff;
   margin: 15px;
   padding: 10px;
 }
-.btn-newsletter-cancel{
+.btn-newsletter-cancel {
   background-color: #ff0000;
   border: 1px solid #ff0000;
 }
 
-.btn-newsletter-ok{
+.btn-newsletter-ok {
   background-color: rgb(19, 72, 216);
   border: 1px solid rgb(19, 72, 216);
 }
@@ -692,7 +693,9 @@ main h3 {
     transform: translateX(110%);
   }
   100% {
-    transform: translateX(-280%); /*Modificar dinámicamente este valor dependiendo de la cantidad de caracteres que haya entre todos los elementos "li"*/
+    transform: translateX(
+      -280%
+    ); /*Modificar dinámicamente este valor dependiendo de la cantidad de caracteres que haya entre todos los elementos "li"*/
   }
 }
 
@@ -953,21 +956,22 @@ footer h3 {
   color: rgb(170, 63, 63);
 }
 
-
-.mensajeErrorValidacion{
+.mensajeErrorValidacion {
   color: rgb(117, 0, 0);
   background-color: #ff808d;
 }
 
-.campoErrorValidacion{
+.campoErrorValidacion {
   border: solid px red;
   box-shadow: 0 0 10px red;
   background-color: #ffb0b8;
 }
 
-
-span{
+span {
   margin-top: 10px;
 }
 
-.sections:has(input:checked){font-weight: bold; color: #660000;}
+.sections:has(input:checked) {
+  font-weight: bold;
+  color: #660000;
+}
