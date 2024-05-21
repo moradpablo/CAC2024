@@ -430,20 +430,23 @@
 
     <div class="modalNewsletter">
       <div class="modalContainer">
-        <form class="form-container">
+        <form class="form-container" id="newsletterForm">
           <h1 class="newsLetterTitle" style="margin-bottom: 0; padding-bottom: 0;">No te quedes desinformado!</h1>
           <h2 style="margin-bottom: 30px;">Registrate y recibí las últimas noticias </h2>
           
           <div class="input-form">
-            <input type="text" name="name" required="required" placeholder="Nombre y Apellido">
+            <input type="text" name="nameNewsletter" placeholder="Nombre y Apellido">
+            <span>&nbsp;</span>
           </div>
           <div class="input-form">
-            <input type="email" name="email" required="required" placeholder="Ingresa tu Email">
+            <input type="email" name="emailNewsletter" placeholder="Ingresa tu Email">
+            <span>&nbsp;</span>
           </div>
           <div class="input-form">
-            <select class="drop-down" id="dropDownProvincias" required placeholder="Selecciona tu provincia">
+            <select class="drop-down" id="dropDownProvincias" placeholder="Selecciona tu provincia" name="selectProvince">
               <option selected="true" disabled="disabled" value="">Seleccione su provincia</option>
             </select>
+            <span>&nbsp;</span>
           </div>
 
           <div class="controlContent">
@@ -451,34 +454,36 @@
             <div class="newsLetterSection">
             
                 <div class="sections">
+                <i class="fa-regular fa-newspaper"></i>
                 <label>Actualidad</label>
-                <input type="checkbox" required="required" name="">
+                <input type="checkbox"  name="checkActualidad">
                 </div>
                 <div class="sections">
+                <i class="fa-solid fa-gun"></i>
                 <label>Policiales</label>
-                <input type="checkbox" required="required" name="">
+                <input type="checkbox" name="checkPoliciales">
                 </div>
                 <div class="sections">
+                <i class="fa-solid fa-money-bill-trend-up"></i>
                 <label>Economía</label>
-                <input type="checkbox" required="required" name="">
+                <input type="checkbox"  name="checkEconomia">
                 </div>
                 <div class="sections">
+                  <i class="fa-solid fa-computer"></i>
                 <label>Tecnología</label>
-                <input type="checkbox"  required="required"name="">
+                <input type="checkbox"  name="checkTecnologia">
                 </div>
                 <div class="sections">
-                <label>Actualidad</label>
-                <input type="checkbox" required="required" name="">
-                </div>
-                <div class="sections">
+                <i class="fa-solid fa-person-running"></i>
                 <label>Deportes</label>
-                <input type="checkbox" required="required" name="">
+                <input type="checkbox" name="checkDeportes">
                 </div>
                 <div class="sections">
-                <label>Conociendo Argentina</label>
-                <input type="checkbox" required="required" name="">
+                <i class="fa-solid fa-mountain-sun"></i>
+                <label>Viajes</label>
+                <input type="checkbox" name="checkViajes">
                 </div>
-
+                <span>&nbsp;</span>
             </div>
           </div>
 
