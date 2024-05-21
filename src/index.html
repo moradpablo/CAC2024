@@ -18,9 +18,13 @@
           <div class="cac-topbar-container">
             <div class="left-content">
               <div class="breaking-news">
-                <span>Breaking News</span>
+                <span>Últimas noticias</span>
                 <div class="ticker">
                   <ul>
+                    <li>Horacio Zeballos campeón del Masters 1000 de Roma.</li>
+                    <li>Otro policía detenido por el robo de cables que terminó con 4 muertos en Bahía Blanca.</li>
+                    <li>Miles de personas en busca de la bendición de Leda, la sanadora rosarina que conovocó una multitud en Santos Lugares.</li>
+                    <li>Economista Juan Santarcángelo: "Marchamos a un esquema parecido al final de los 90".</li>
                     <li>hola pablo</li>
                     <li>hola pablo</li>
                     <li>hola pablo hola pablohola pablohola pablohola pablohola pablo</li>
@@ -233,7 +237,7 @@
           </section>
         </section>
 
-        <section id="economy" class="economy-section">
+        <section id="economy" class="economy-section justify-section">
           <div class="title-section">
             <h3>ECONOMÍA</h3>
             <hr class="solid" />
@@ -281,7 +285,7 @@
           </article>
         </section>
 
-        <section id="sports" class="sports-section">
+        <section id="sports" class="sports-section justify-section">
           <div class="title-section">
             <h2>DEPORTES</h2>
             <hr class="solid" />
@@ -320,7 +324,7 @@
           </article>
         </section>
 
-        <section id="technology" class="technology-section">
+        <section id="technology" class="technology-section justify-section">
           <div class="title-section">
             <h2>TECNOLOGÍA</h2>
             <hr class="solid" />
@@ -490,6 +494,75 @@
       </div>
 
     </footer>
+
+    <div class="modalNewsletter">
+      <div class="modalContainer">
+        <form class="form-container" id="newsletterForm">
+          <h1 class="newsLetterTitle" style="margin-bottom: 0; padding-bottom: 0;">No te quedes desinformado!</h1>
+          <h2 style="margin-bottom: 30px;">Registrate y recibí las últimas noticias </h2>
+          
+          <div class="input-form">
+            <input type="text" name="nameNewsletter" placeholder="Nombre y Apellido">
+            <span>&nbsp;</span>
+          </div>
+          <div class="input-form">
+            <input type="email" name="emailNewsletter" placeholder="Ingresa tu Email">
+            <span>&nbsp;</span>
+          </div>
+          <div class="input-form">
+            <select class="drop-down" id="dropDownProvincias" placeholder="Selecciona tu provincia" name="selectProvince">
+              <option selected="true" disabled="disabled" value="">Seleccione su provincia</option>
+            </select>
+            <span>&nbsp;</span>
+          </div>
+
+          <div class="controlContent">
+            <label for="">Selecciona los temas de interés</label>
+            <div class="newsLetterSection">
+            
+                <div class="sections">
+                <i class="fa-regular fa-newspaper"></i>
+                <label>Actualidad</label>
+                <input type="checkbox"  name="checkActualidad">
+                </div>
+                <div class="sections">
+                <i class="fa-solid fa-gun"></i>
+                <label>Policiales</label>
+                <input type="checkbox" name="checkPoliciales">
+                </div>
+                <div class="sections">
+                <i class="fa-solid fa-money-bill-trend-up"></i>
+                <label>Economía</label>
+                <input type="checkbox"  name="checkEconomia">
+                </div>
+                <div class="sections">
+                  <i class="fa-solid fa-computer"></i>
+                <label>Tecnología</label>
+                <input type="checkbox"  name="checkTecnologia">
+                </div>
+                <div class="sections">
+                <i class="fa-solid fa-person-running"></i>
+                <label>Deportes</label>
+                <input type="checkbox" name="checkDeportes">
+                </div>
+                <div class="sections">
+                <i class="fa-solid fa-mountain-sun"></i>
+                <label>Viajes</label>
+                <input type="checkbox" name="checkViajes">
+                </div>
+                <span>&nbsp;</span>
+            </div>
+          </div>
+
+          <div class="newsletterButtonContent">
+            <button type="submit" class="btn-newsletter-ok" id="newsLetterOk">Aceptar</button>
+            <button class="btn-newsletter-cancel" id="newsLetterCancel">No me interesa</button>
+          </div>
+
+        </form>
+      </div>
+
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/f8fec4fe05.js" crossorigin="anonymous"></script>
