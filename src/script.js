@@ -1,14 +1,151 @@
 const newsletterModal = document.getElementById('modalNewsletter');
-
 const newsletter = localStorage.getItem('newsletter');
+const userName = document.querySelector('input[name="email"]');
+const passwordField = document.querySelector('input[name="password"]');
+const userNameSign = document.querySelector('input[name="email-signup"]');
+const passwordFieldSign = document.querySelector('input[name="password-signup"]');
 
 onload = function () {
   this.setTimeout(() => {
     if (newsletter !== 'false') {
       newsletterModal.style.display = 'flex';
     }
-  }, 1000);
+  }, 3000);
 };
+
+function validatePassword() {
+  let pass = passwordField.value;
+  let p = passwordField.nextElementSibling;
+  if (typeof pass !== 'string' || pass.length < 8) {
+    passwordField.classList.add('input-red');
+    p.textContent = 'Password should have at least 8 characters!';
+  }
+  let hasNumber = false;
+  let hasLetter = false;
+  for (let i = 0; i < pass.length; i++) {
+    let result = pass.charCodeAt(i);
+    if (!((result >= 48 && result <= 57) || (result >= 65 && result <= 90) || (result >= 97 && result <= 122))) {
+      p.textContent = 'The password must contain only letters and numbers.';
+    }
+    if (result >= 48 && result <= 57) {
+      hasNumber = true;
+    }
+    if ((result >= 65 && result <= 90) || (result >= 97 && result <= 122)) {
+      hasLetter = true;
+    }
+  }
+  if (!hasNumber) {
+    p.textContent = 'The password must contain at least one number!';
+  }
+  if (!hasLetter) {
+    p.textContent = 'The password must contain at least one letter!';
+  } else {
+    passwordField.classList.remove('input-red');
+  }
+}
+
+function validatePasswordSign() {
+  let pass = passwordFieldSign.value;
+  let p = passwordFieldSign.nextElementSibling;
+  if (typeof pass !== 'string' || pass.length < 8) {
+    passwordFieldSign.classList.add('input-red');
+    p.textContent = 'Password should have at least 8 characters!';
+  }
+  let hasNumber = false;
+  let hasLetter = false;
+  for (let i = 0; i < pass.length; i++) {
+    let result = pass.charCodeAt(i);
+    if (!((result >= 48 && result <= 57) || (result >= 65 && result <= 90) || (result >= 97 && result <= 122))) {
+      p.textContent = 'The password must contain only letters and numbers.';
+    }
+    if (result >= 48 && result <= 57) {
+      hasNumber = true;
+    }
+    if ((result >= 65 && result <= 90) || (result >= 97 && result <= 122)) {
+      hasLetter = true;
+    }
+  }
+  if (!hasNumber) {
+    p.textContent = 'The password must contain at least one number!';
+  }
+  if (!hasLetter) {
+    p.textContent = 'The password must contain at least one letter!';
+  } else {
+    passwordFieldSign.classList.remove('input-red');
+  }
+}
+
+function validateEmail() {
+  let emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
+  let p = userName.nextElementSibling;
+  if (userName.value === '') {
+    userName.classList.add('input-red');
+    p.textContent = 'The email address is empty.';
+  } else if (!userName.value.match(emailExpression)) {
+    p.textContent = 'The email address is not valid.';
+    userName.classList.add('input-red');
+    /* userName.classList.remove('green-border'); */
+    return false;
+  } else {
+    p.textContent = '';
+    /* userName.classList.add('green-border'); */
+    userName.classList.remove('input-red');
+    return true;
+  }
+}
+
+function validateEmailSign() {
+  let emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
+  let p = userNameSign.nextElementSibling;
+  if (userNameSign.value === '') {
+    userNameSign.classList.add('input-red');
+    p.textContent = 'The email address is empty.';
+  } else if (!userNameSign.value.match(emailExpression)) {
+    p.textContent = 'The email address is not valid.';
+    userNameSign.classList.add('input-red');
+    /* userName.classList.remove('green-border'); */
+    return false;
+  } else {
+    p.textContent = '';
+    /* userName.classList.add('green-border'); */
+    userNameSign.classList.remove('input-red');
+    return true;
+  }
+}
+
+userName.addEventListener('blur', validateEmail);
+userName.addEventListener('focus', function () {
+  this.classList.remove('red-border');
+  let p = this.nextElementSibling;
+  if (p && p.classList.contains('input-p')) {
+    p.textContent = '';
+  }
+});
+passwordField.addEventListener('blur', validatePassword);
+passwordField.addEventListener('focus', function () {
+  this.classList.remove('red-border');
+  let p = this.nextElementSibling;
+  if (p && p.classList.contains('input-p')) {
+    p.textContent = '';
+  }
+});
+
+userNameSign.addEventListener('blur', validateEmailSign);
+userNameSign.addEventListener('focus', function () {
+  this.classList.remove('red-border');
+  let p = this.nextElementSibling;
+  if (p && p.classList.contains('input-p')) {
+    p.textContent = '';
+  }
+});
+passwordFieldSign.addEventListener('blur', validatePasswordSign);
+passwordFieldSign.addEventListener('focus', function () {
+  this.classList.remove('red-border');
+  let p = this.nextElementSibling;
+  if (p && p.classList.contains('input-p')) {
+    p.textContent = '';
+  }
+});
 
 document.addEventListener('DOMContentLoaded', function () {
   const modal = document.getElementById('modal');

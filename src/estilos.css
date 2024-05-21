@@ -89,7 +89,7 @@ body {
   padding: 0;
   margin: 0;
   white-space: nowrap;
-  animation: ticker 10s linear infinite;
+  animation: ticker 5s linear infinite;
 }
 
 .ticker li {
@@ -544,13 +544,15 @@ main h3 {
   align-items: center;
   width: 100%;
 }
-.input-form input,
+.input-email,
+.input-last-name,
+.input-password,
+.input-first-name,
 .drop-down {
   width: 90%;
   height: 45px;
   border-radius: 4px;
   padding: 6px 20px;
-  margin-bottom: 30px;
   border: 1px solid #d8e2e9;
 }
 .form-login,
@@ -614,6 +616,20 @@ main h3 {
   padding: 10px;
 }
 
+.input-red {
+  border: 1px solid #dc3545;
+}
+.input-p {
+  color: #dc3545;
+  width: 90%;
+  padding: 6px 20px;
+  text-align: left;
+}
+
+.green-border {
+  border-radius: 4px;
+  border: 1px solid rgb(9, 185, 9);
+}
 /*---------------- END OF MAIN -----------------*/
 
 /*------------------ FOOTER --------------------*/
@@ -625,10 +641,38 @@ main h3 {
     transform: translateX(100%);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-200%);
   }
 }
 
+@media screen and (max-width: 545px) {
+  .cac-topbar-container {
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    margin: 0;
+    align-items: normal;
+  }
+  .breaking-news {
+    width: 100%;
+  }
+  .breaking-news span {
+    width: auto;
+  }
+  .right-content {
+    display: flex;
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 100%;
+    justify-content: center;
+    height: 5vh;
+    border-top: 1px solid #d8e2e9;
+  }
+  .left-content {
+    max-width: none;
+  }
+}
 @media screen and (min-width: 768px) {
   .breaking-news-section {
     flex-direction: row;
@@ -797,6 +841,10 @@ main h3 {
 
   .sports-card:nth-child(1) p {
     font-size: 20px;
+  }
+  .right-content {
+    display: block;
+    text-align: center;
   }
 }
 
