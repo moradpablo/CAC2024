@@ -389,9 +389,6 @@ main h3 {
   width: 100%;
 }
 
-.sports-article {
-}
-
 .right-content a {
   text-decoration: none;
   color: #fff;
@@ -490,13 +487,6 @@ main h3 {
   padding: 30px;
   grid-template-columns: repeat(2, minmax(200px, 1fr));
   gap: 1em;
-}
-.sports-thumbail {
-}
-
-.sponsor-thumbail {
-}
-.technology-thumbail {
 }
 
 .account-form {
