@@ -251,7 +251,7 @@ main h3 {
   background-color: turquoise;
 }
 
-.justify-section {
+
 .justify-section {
   margin-top: 50px;
 }
@@ -357,8 +357,7 @@ main h3 {
   width: 100%;
 }
 
-.sports-article {
-}
+
 
 .right-content a {
   text-decoration: none;
@@ -564,12 +563,12 @@ main h3 {
   text-align: center;
 }
 
-.form-signup {
+
 .form-signup {
   display: none;
 }
 
-.modalNewsletter {
+
 .modalNewsletter {
   position: fixed;
   display: flex;
@@ -587,12 +586,12 @@ main h3 {
   transition: opacity 0.5s linear;
 }
 
-.modalNewsletterFadeIn {
+
 .modalNewsletterFadeIn {
   opacity: 1;
 }
 
-.modalContainer {
+
 .modalContainer {
   background-color: #acacac;
   width: 400px;
