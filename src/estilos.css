@@ -253,7 +253,6 @@ main h3 {
   background-color: turquoise;
 }
 
-
 .justify-section {
   margin-top: 50px;
 }
@@ -472,7 +471,6 @@ main h3 {
   background-color: #fff;
 }
 
-
 .controlContent {
   text-align: center;
 }
@@ -569,7 +567,6 @@ main h3 {
   display: none;
 }
 
-
 .modalNewsletter {
   position: fixed;
   display: flex;
@@ -587,11 +584,9 @@ main h3 {
   transition: opacity 0.5s linear;
 }
 
-
 .modalNewsletterFadeIn {
   opacity: 1;
 }
-
 
 .modalContainer {
   background-color: #acacac;
@@ -613,7 +608,6 @@ main h3 {
 }
 
 .newsletterButtonContent {
-.newsletterButtonContent {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -622,7 +616,6 @@ main h3 {
 .btn-newsletter-cancel,
 .btn-newsletter-ok {
   border-radius: 4px;
-
 
   color: #fff;
   margin: 15px;
@@ -634,7 +627,6 @@ main h3 {
   border: 1px solid #ff0000;
 }
 
-.btn-newsletter-ok {
 .btn-newsletter-ok {
   background-color: rgb(19, 72, 216);
   border: 1px solid rgb(19, 72, 216);
