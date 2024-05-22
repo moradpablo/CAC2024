@@ -1,32 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-@media screen and (max-width: 1200px) {
-  .main-sections {
-    grid-template-columns: 1fr 1fr;
-  }
-  .sponsor-thumbail {
-    display: none;
-  }
-}
-@media screen and (max-width: 700px) {
-  .main-sections {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
-  }
-  .sports-thumbail {
-    grid-column: 1/2;
-    grid-row: 1/2;
-  }
-  .technology-thumbail {
-    grid-row: 2/3;
-    grid-column: 1/2;
-  }
-  .economy-thumbail {
-    grid-row: 3/4;
-    grid-column: 1/2;
-  }
-}
-
 html,
 body {
   font-family: 'Poppins', sans-serif;
@@ -661,6 +634,81 @@ main h3 {
   max-height: 500px;
   object-fit: fill;
 }
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to top, rgba(53, 52, 52, 1) 0%, rgba(53, 52, 52, 0.5) 80%, rgb(13, 13, 13, 1) 100%);
+  padding-top: 40px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  color: #dc3545;
+  font-size: 20px;
+  padding: 10px 40px 40px;
+}
+
+footer h3 {
+  font-size: 16px;
+}
+
+.instagram-social {
+  color: orange;
+}
+
+.instagram-social:hover {
+  color: rgb(255, 206, 114);
+}
+
+.facebook-social {
+  color: rgb(67, 127, 255);
+}
+
+.facebook-social:hover {
+  color: rgb(142, 178, 255);
+}
+
+.twitter-social {
+  color: gray;
+}
+
+.twitter-social:hover {
+  color: rgb(233, 233, 233);
+}
+
+.tiktok-social {
+  color: rgb(180, 0, 0);
+}
+
+.tiktok-social:hover {
+  color: rgb(170, 63, 63);
+}
+
+.mensajeErrorValidacion {
+  color: rgb(117, 0, 0);
+  background-color: #ff808d;
+}
+
+.campoErrorValidacion {
+  border: solid px red;
+  box-shadow: 0 0 10px red;
+  background-color: #ffb0b8;
+}
+
+span {
+  margin-top: 10px;
+}
+
+.sections:has(input:checked) {
+  font-weight: bold;
+  color: #660000;
+}
+
 /*---------------- END OF MAIN -----------------*/
 
 /*------------------ FOOTER --------------------*/
@@ -678,6 +726,32 @@ main h3 {
   }
 }
 
+@media screen and (max-width: 1200px) {
+  .main-sections {
+    grid-template-columns: 1fr 1fr;
+  }
+  .sponsor-thumbail {
+    display: none;
+  }
+}
+@media screen and (max-width: 700px) {
+  .main-sections {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .sports-thumbail {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .technology-thumbail {
+    grid-row: 2/3;
+    grid-column: 1/2;
+  }
+  .economy-thumbail {
+    grid-row: 3/4;
+    grid-column: 1/2;
+  }
+}
 @media screen and (max-width: 560px) {
   .custom-carousel-img {
     height: 300px;
