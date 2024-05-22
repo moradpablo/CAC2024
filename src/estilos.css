@@ -90,7 +90,7 @@ body {
   padding: 0;
   margin: 0;
   white-space: nowrap;
-  animation: ticker 5s linear infinite;
+  animation: ticker 10s linear infinite;
 }
 
 .ticker li {
@@ -702,13 +702,11 @@ main h3 {
   }
   .right-content {
     display: flex;
-    position: relative;
-    top: 0;
-    right: 0;
     width: 100%;
     justify-content: center;
     height: 5vh;
     border-top: 1px solid #d8e2e9;
+    align-items: center;
   }
   .left-content {
     max-width: none;
