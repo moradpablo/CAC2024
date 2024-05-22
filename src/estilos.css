@@ -55,8 +55,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-right: 20px;
-  margin-left: 20px;
 }
 
 .left-content {
@@ -64,15 +62,18 @@ body {
 }
 .right-content {
   width: 20vw;
-  align-items: center;
+  text-align: center;
+  font-size: 16px;
 }
 
 .breaking-news span {
-  width: 15vw;
+  width: auto;
   color: #fff;
+  margin: 0;
   padding: 15px 20px;
   border-right: 1px solid #f0f3f5;
   font-weight: 500;
+  height: 100%;
 }
 
 .breaking-news {
@@ -103,11 +104,6 @@ body {
   position: absolute;
   left: 5px;
   color: #fff;
-}
-
-.right-content {
-  align-self: center;
-  font-size: 16px;
 }
 
 a {
@@ -584,11 +580,6 @@ main h3 {
   justify-content: center;
   align-items: center;
 }
-.right-content {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-}
 
 .form-signup {
   display: none;
@@ -671,7 +662,9 @@ main h3 {
   border-radius: 4px;
   border: 1px solid rgb(9, 185, 9);
 }
-
+.custom-carousel-img {
+  height: 500px;
+}
 /*---------------- END OF MAIN -----------------*/
 
 /*------------------ FOOTER --------------------*/
@@ -690,6 +683,10 @@ main h3 {
 }
 
 @media screen and (max-width: 545px) {
+  .custom-carousel-img {
+    height: 250px;
+  }
+
   .cac-topbar-container {
     display: flex;
     height: auto;
