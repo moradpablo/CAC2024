@@ -252,6 +252,7 @@ main h3 {
 }
 
 .justify-section {
+.justify-section {
   margin-top: 50px;
 }
 
@@ -469,6 +470,7 @@ main h3 {
   background-color: #fff;
 }
 
+
 .controlContent {
   text-align: center;
 }
@@ -513,14 +515,16 @@ main h3 {
   width: 100%;
   margin-bottom: 15px;
 }
-
-.input-form input,
-.drop-down {
+.input-email,
+.input-last-name,
+.input-password,
+.input-first-name,
+.drop-down,
+.input-form input {
   width: 90%;
   height: 45px;
   border-radius: 4px;
   padding: 6px 20px;
-
   border: 1px solid #d8e2e9;
 }
 .form-login,
@@ -561,9 +565,11 @@ main h3 {
 }
 
 .form-signup {
+.form-signup {
   display: none;
 }
 
+.modalNewsletter {
 .modalNewsletter {
   position: fixed;
   display: flex;
@@ -582,9 +588,11 @@ main h3 {
 }
 
 .modalNewsletterFadeIn {
+.modalNewsletterFadeIn {
   opacity: 1;
 }
 
+.modalContainer {
 .modalContainer {
   background-color: #acacac;
   width: 400px;
@@ -605,6 +613,7 @@ main h3 {
 }
 
 .newsletterButtonContent {
+.newsletterButtonContent {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -614,10 +623,10 @@ main h3 {
 .btn-newsletter-ok {
   border-radius: 4px;
 
+
   color: #fff;
   margin: 15px;
   padding: 10px;
-  width: 100%;
 }
 
 .btn-newsletter-cancel {
@@ -625,6 +634,7 @@ main h3 {
   border: 1px solid #ff0000;
 }
 
+.btn-newsletter-ok {
 .btn-newsletter-ok {
   background-color: rgb(19, 72, 216);
   border: 1px solid rgb(19, 72, 216);
@@ -707,6 +717,20 @@ span {
 .sections:has(input:checked) {
   font-weight: bold;
   color: #660000;
+}
+.input-red {
+  border: 1px solid #dc3545;
+}
+.input-p {
+  color: #dc3545;
+  width: 90%;
+  padding: 6px 20px;
+  text-align: left;
+}
+
+.green-border {
+  border-radius: 4px;
+  border: 1px solid rgb(9, 185, 9);
 }
 
 /*---------------- END OF MAIN -----------------*/
@@ -802,6 +826,34 @@ span {
   }
 }
 
+@media screen and (max-width: 545px) {
+  .cac-topbar-container {
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    margin: 0;
+    align-items: normal;
+  }
+  .breaking-news {
+    width: 100%;
+  }
+  .breaking-news span {
+    width: auto;
+  }
+  .right-content {
+    display: flex;
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 100%;
+    justify-content: center;
+    height: 5vh;
+    border-top: 1px solid #d8e2e9;
+  }
+  .left-content {
+    max-width: none;
+  }
+}
 @media screen and (min-width: 768px) {
   .breaking-news-section {
     flex-direction: row;
@@ -970,5 +1022,9 @@ span {
 
   .sports-card:nth-child(1) p {
     font-size: 20px;
+  }
+  .right-content {
+    display: block;
+    text-align: center;
   }
 }
