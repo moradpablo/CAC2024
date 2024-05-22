@@ -45,6 +45,9 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+.carousel-custom-img {
+  max-height: 700px;
+}
 
 .cac-topbar {
   color: #fff;
