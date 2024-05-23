@@ -358,9 +358,6 @@ main h3 {
   width: 100%;
 }
 
-.sports-article {
-}
-
 .right-content a {
   text-decoration: none;
   color: #fff;
@@ -557,11 +554,6 @@ main h3 {
   justify-content: center;
   align-items: center;
 }
-.right-content {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-}
 
 .form-signup {
   display: none;
@@ -738,9 +730,7 @@ span {
     transform: translateX(110%);
   }
   100% {
-    transform: translateX(
-      -280%
-    ); /*Modificar dinámicamente este valor dependiendo de la cantidad de caracteres que haya entre todos los elementos "li"*/
+    transform: translateX(-280%);
   }
 }
 
@@ -782,11 +772,9 @@ span {
   .right-content {
     display: flex;
     justify-content: center;
-    position: relative;
     width: auto;
     height: 5vh;
-    top: 0;
-    right: 0;
+    align-items: center;
     width: 100%;
     border-top: 1px solid #fff;
   }
