@@ -658,6 +658,10 @@ main h3 {
   text-align: left;
   gap: 10px;
 }
+.img-brand {
+  max-height: 100px;
+  padding-top: 5px;
+}
 }
 @media screen and (max-width: 1200px) {
   .main-sections {
@@ -840,10 +844,6 @@ main h3 {
 @media screen and (max-width: 1365px) {
   #carouselExampleCaptions {
     display: none;
-  }
-  .img-brand {
-    max-height: 120px;
-    padding-top: 5px;
   }
 }
 
