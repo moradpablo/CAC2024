@@ -451,6 +451,11 @@ main h3 {
   width: 100%;
 }
 
+.custom-carousel-img {
+  max-height: 500px;
+  object-fit: fill;
+}
+
 .main-sections {
   display: grid;
   padding: 30px;
