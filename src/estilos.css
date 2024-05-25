@@ -456,6 +456,11 @@ main h3 {
   width: 100%;
 }
 
+.custom-carousel-img {
+  max-height: 500px;
+  object-fit: fill;
+}
+
 .main-sections {
   display: grid;
   padding: 30px;
@@ -653,6 +658,110 @@ main h3 {
   text-align: left;
   gap: 10px;
 }
+}
+@media screen and (max-width: 1200px) {
+  .main-sections {
+    grid-template-columns: 1fr 1fr;
+  }
+  .sponsor-thumbail {
+    display: none;
+  }
+}
+@media screen and (max-width: 700px) {
+  .main-sections {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .sports-thumbail {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .technology-thumbail {
+    grid-row: 2/3;
+    grid-column: 1/2;
+  }
+  .economy-thumbail {
+    grid-row: 3/4;
+    grid-column: 1/2;
+  }
+}
+@media screen and (max-width: 560px) {
+  .custom-carousel-img {
+    height: 300px;
+    object-fit: fill;
+  }
+  .cac-topbar-container {
+    flex-direction: column;
+    margin: 0;
+  }
+  .right-content {
+    display: flex;
+    justify-content: center;
+    width: auto;
+    height: 5vh;
+    align-items: center;
+    width: 100%;
+    border-top: 1px solid #fff;
+  }
+  .left-content {
+    width: 100%;
+    max-width: 100%;
+  }
+  .breaking-news {
+    width: 100%;
+  }
+  .breaking-news span {
+    width: auto;
+    padding-top: 10px;
+    margin: 0;
+    max-width: 30%;
+  }
+  .breaking-news-article-content {
+    display: flex;
+    width: auto;
+    flex-direction: column;
+    margin: 0px 25px;
+    padding: 0;
+    text-align: left;
+    gap: 10px;
+  }
+  .navbar-nav {
+    text-align: center;
+  }
+  .d-flex {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 545px) {
+  .custom-carousel-img {
+    height: 250px;
+  }
+
+  .cac-topbar-container {
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    margin: 0;
+    align-items: normal;
+  }
+  .breaking-news {
+    width: 100%;
+  }
+  .breaking-news span {
+    width: auto;
+  }
+  .right-content {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    height: 5vh;
+    border-top: 1px solid #d8e2e9;
+    align-items: center;
+  }
+  .left-content {
+    max-width: none;
+  }
 }
 
 @media screen and (min-width: 768px) {
