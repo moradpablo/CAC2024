@@ -151,6 +151,7 @@ a {
 .navbar-nav {
   width: 100%;
   justify-content: center;
+  text-align: center;
 }
 
 .nav-link {
@@ -174,6 +175,10 @@ a {
 .nav-link:hover::after {
   transform-origin: bottom left;
   transform: scaleX(1);
+}
+
+.d-flex {
+  justify-content: center;
 }
 
 /*-------------- END OF HEADER ----------------*/
@@ -714,6 +719,10 @@ main h3 {
   #carouselExampleCaptions {
     display: none;
   }
+  .img-brand {
+    max-height: 120px;
+    padding-top: 5px;
+  }
 }
 
 @media screen and (min-width: 1366px) {
@@ -880,4 +889,56 @@ span{
   margin-top: 10px;
 }
 
+.custom-carousel-img {
+  max-height: 500px;
+  object-fit: fill;
+  height:500px
+}
+
 .sections:has(input:checked){font-weight: bold; color: #660000;}
+
+@media screen and (max-width: 560px) {
+  .custom-carousel-img {
+    height: 300px;
+    max-height: 300px;
+    object-fit: fill;
+  }
+  .cac-topbar-container {
+    flex-direction: column;
+    margin: 0;
+  }
+  .right-content {
+    display: flex;
+    justify-content: center;
+    width: auto;
+    height: 5vh;
+    align-items: center;
+    width: 100%;
+    border-top: 1px solid #fff;
+  }
+  .left-content {
+    width: 100%;
+    max-width: 100%;
+  }
+  .breaking-news {
+    width: 100%;
+  }
+.breaking-news span {
+    width: auto;
+  }
+  .right-content {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    height: 5vh;
+    border-top: 1px solid #d8e2e9;
+    align-items: center;
+  }
+  .left-content {
+    max-width: none;
+  }
+  .img-brand {
+    max-height: 60px;
+    padding-top: 5px;
+  }
+}
