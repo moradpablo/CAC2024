@@ -643,6 +643,18 @@ main h3 {
   }
 }
 
+@media screen and (max-width: 768px) {
+.breaking-news-article-content {
+  display: flex;
+  width: auto;
+  flex-direction: column;
+  margin: 0px 25px;
+  padding: 0;
+  text-align: left;
+  gap: 10px;
+}
+}
+
 @media screen and (min-width: 768px) {
   .breaking-news-section {
     flex-direction: row;
@@ -714,6 +726,7 @@ main h3 {
   footer h3 {
     font-size: 24px !important;
   }
+  
 }
 @media screen and (max-width: 1365px) {
   #carouselExampleCaptions {
@@ -941,4 +954,5 @@ span{
     max-height: 60px;
     padding-top: 5px;
   }
+
 }
